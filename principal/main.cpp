@@ -27,7 +27,6 @@ void desafio(){
     }
     std::cout << std::endl;
 
-
 }
 
 int main() {

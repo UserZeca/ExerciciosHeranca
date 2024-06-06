@@ -6,19 +6,19 @@
 // Construtor
 Graph::Graph() {}
 
-// Adiciona vertice
+// Adiciona um novo vertice
 void Graph::addVertex(const std::string& cityName) {
     // Adiciona uma linha e uma coluna e matriz de adjacencia para o novo vertice
     for (auto& row : adjMatrix)
         row.push_back(0);
     adjMatrix.push_back(std::vector<int>(adjMatrix.size() + 1, 0));
-    // Mapear o nome da cidade para o indice do vertice na matriz de adjacencia
+    // Mapeia o nome da cidade para o indice do vertice na matriz de adjacencia
     vertexIndices[cityName] = adjMatrix.size() - 1;
 }
 
-// Adicionar aresta entre dois vertices
+// Adiciona aresta entre dois vertices
 void Graph::addEdge(const std::string& srcCity, const std::string& destCity) {
-    // Obter os indices dos vertices a partir dos nomes das cidades
+    // Obtem os indices dos vertices a partir dos nomes das cidades
     int src = vertexIndices[srcCity];
     int dest = vertexIndices[destCity];
     // Verifica se os vertices estao dentro dos limites
@@ -43,7 +43,7 @@ bool Graph::isAdjacent(const std::string& srcCity, const std::string& destCity) 
     return false;
 }
 
-// Obter vertices vizinhos de um determinado vertice
+// Obtem os vertices vizinhos de um determinado vertice
 std::vector<std::string> Graph::getNeighbors(const std::string& cityName) {
     std::vector<std::string> neighbors;
     int vertex = vertexIndices[cityName];
@@ -58,7 +58,7 @@ std::vector<std::string> Graph::getNeighbors(const std::string& cityName) {
     return neighbors;
 }
 
-// Mostrar matriz de adjacencia
+// Mostra a matriz de adjacencia
 void Graph::display() {
     std::cout << "Matriz de Adjacencia:" << std::endl;
     for (const auto& row : adjMatrix) {
