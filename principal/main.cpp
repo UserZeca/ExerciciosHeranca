@@ -1,13 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include "./graph/graph.hpp"
-#include "./funcionario/funcionario.hpp"
-#include "./veiculo/Veiculo.hpp"
-#include "./veiculo/Caminhao.hpp"
-#include "./veiculo/Van.hpp"
+#include "../graph/graph.hpp"
+#include "../funcionario/funcionario.hpp"
+#include "../veiculo/Veiculo.hpp"
+#include "../veiculo/Caminhao.hpp"
+#include "../veiculo/Van.hpp"
 
 void desafio(){
+    
+    std::cout << "Desafio de Grafo" << std::endl;
+
     Graph graph;
 
     // Adiciona alguns vertices e arestas
@@ -34,6 +37,8 @@ void desafio(){
 
 void testeProblemaFuncionario(){
 
+    std::cout << "Problema Funcionarios" << std::endl;
+
     // Criando objetos para diferentes tipos de funcionários
     FuncionarioRegular regular("Julia", 1, 2000.0);
     Gerente gerente("Maria", 2, 3000.0, 1000.0);
@@ -48,7 +53,8 @@ void testeProblemaFuncionario(){
 
 void testandoProblemaVeiculos(){
 
-     std::vector<Veiculo*> frota;
+    std::cout << "Problema Veiculos" << std::endl;
+    std::vector<Veiculo*> frota;
 
     // Adicionando veículos à frota
     frota.push_back(new Caminhao("Scania", "R730", 20, 4));
@@ -77,9 +83,9 @@ void testandoProblemaVeiculos(){
 
 int main() {
     
-    //testeProblemaFuncionario();
+    testeProblemaFuncionario();
     testandoProblemaVeiculos();
-    //desafio();
+    desafio();
 
     return 0;
 }

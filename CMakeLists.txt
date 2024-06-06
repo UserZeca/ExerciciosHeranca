@@ -1,22 +1,28 @@
 cmake_minimum_required(VERSION 3.10)
-project(MyProject)
+project(SeuProjeto)
 
-# Collect all source files from different directories
-file(GLOB CORE_SOURCES "main/*.cpp")
-file(GLOB GRAPH_SOURCES "graph/*.cpp")
-#file(GLOB ACESSORIOS_SOURCES "acessorios-cpp/*.cpp")
+# Definindo o compilador C++
+set(CMAKE_CXX_COMPILER g++)  # Altere para o compilador que você está utilizando, se necessário
 
-# Combine all source files into a single list
+# Configuração do CMake para encontrar os arquivos de header
+include_directories(funcionario)
+include_directories(graph)
+include_directories(veiculo)
+
+# Adicionando todos os arquivos de código fonte
 set(SOURCES
-    ${CORE_SOURCES}
-    ${GRAPH_SOURCES}
-    #${PERSONAGENS_SOURCES}
-    #${ACESSORIOS_SOURCES}
+    funcionario/funcionario.cpp
+    funcionario/funcionario.hpp
+    graph/graph.cpp
+    graph/graph.hpp
+    veiculo/Caminhao.cpp
+    veiculo/Caminhao.hpp
+    veiculo/Van.cpp
+    veiculo/Van.hpp
+    veiculo/Veiculo.cpp
+    veiculo/Veiculo.hpp
     principal/main.cpp
 )
 
-# Include header files
-include_directories(graph-hpp)
-
-# Create an executable
-add_executable(my_program ${SOURCES})
+# Criando o executável
+add_executable(seu_executavel ${SOURCES})

@@ -1,0 +1,51 @@
+Para usar o CMake no Windows Subsystem for Linux (WSL), você precisa seguir estas etapas:
+
+Instale o WSL: Se você ainda não tiver o WSL instalado, vá para as configurações do Windows, clique em "Ativar ou desativar recursos do Windows", e marque a opção "Subsistema do Windows para Linux". Siga as instruções para instalar a distribuição Linux de sua escolha na Microsoft Store.
+
+Inicie o WSL: Após instalar o WSL, abra o terminal do seu sistema operacional (por exemplo, o terminal do Ubuntu, se você instalou o Ubuntu no WSL).
+
+Atualize o sistema: Execute os comandos abaixo para garantir que seu sistema esteja atualizado:
+
+sql
+Copiar código
+sudo apt update
+sudo apt upgrade
+Instale o CMake: Você pode instalar o CMake no WSL usando o gerenciador de pacotes APT (Advanced Package Tool) com o seguinte comando:
+
+Copiar código
+sudo apt install cmake
+Verifique a instalação: Depois de instalar o CMake, verifique se foi instalado corretamente digitando:
+
+css
+Copiar código
+cmake --version
+Isso deve exibir a versão do CMake instalada.
+
+Agora você pode usar o CMake no WSL da mesma forma que faria em um ambiente Linux tradicional. Basta navegar até o diretório do seu projeto e usar comandos CMake como cmake, cmake --build, etc.
+
+
+Você
+me ajude com o ponto 1
+ChatGPT
+ChatGPT
+Claro! Aqui estão as etapas detalhadas para instalar o Windows Subsystem for Linux (WSL) no Windows 10:
+
+Abra as Configurações: Clique no botão "Iniciar" e selecione o ícone de engrenagem para abrir as configurações do Windows.
+
+Acesse "Ativar ou desativar recursos do Windows": Na janela de configurações, selecione a opção "Aplicativos" e, em seguida, clique em "Recursos opcionais".
+
+Habilitar o Subsistema do Windows para Linux: Role para baixo na lista de recursos opcionais até encontrar "Subsistema do Windows para Linux". Marque a caixa ao lado dele e clique em "OK".
+
+Instale uma Distribuição Linux: Após ativar o WSL, você será solicitado a reiniciar o computador. Após reiniciar, abra a Microsoft Store e pesquise por "Linux". Você encontrará várias distribuições Linux disponíveis, como Ubuntu, Debian, Fedora, etc. Escolha a distribuição Linux de sua preferência e clique em "Instalar".
+
+Configure sua Distribuição Linux: Após a instalação, clique no botão "Iniciar" e procure pela distribuição Linux que você instalou (por exemplo, "Ubuntu"). Clique nele para iniciar a configuração. Você será solicitado a criar um nome de usuário e uma senha para a distribuição Linux.
+
+Atualize o Sistema: Depois de configurar a distribuição Linux, abra o terminal e execute os seguintes comandos para garantir que o sistema esteja atualizado:
+
+sql
+Copiar código
+sudo apt update
+sudo apt upgrade
+Agora você tem o WSL instalado e configurado com uma distribuição Linux de sua escolha. Você pode iniciar o WSL sempre que precisar usando o atalho que foi criado ou procurando pelo nome da distribuição Linux no menu Iniciar do Windows.
+
+
