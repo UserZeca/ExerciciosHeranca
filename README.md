@@ -2,11 +2,10 @@
 
 # Como executar:
 
-Utilizando o **WLS** Na pasta **build** do projeto execute os seguintes comandos:
-
-
 ## Crie a pasta build (se não existir)
 ```mkdir build```
+
+Utilizando o **WLS** Na pasta **build** do projeto execute os seguintes comandos:
 
 ## Primeiro rode o Cmake:
 ```cmake ..```
